@@ -26,3 +26,5 @@ workflows:
     jobs:
       - deploy
       - notify-slack
+          requires:
+            -deploy
