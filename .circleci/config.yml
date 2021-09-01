@@ -9,10 +9,20 @@ jobs:
             echo "The command above installs Heroku, the command below deploys.
             What you do inbetween is up to you!"
       - heroku/deploy-via-git
+  notify-slack:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+     - run:
+                  name: Notify Slack Channel 
+                  command: |
+                      curl -X POST --data-urlencode "payload={\"text\": \"*** BUILD FINISHED ***\n$CIRCLE_BUILD_URL\"}" $SLACK_WEBHOOK
 orbs:
   heroku: circleci/heroku@1.2.6
+  slack: circleci/slack@4.1
 version: 2.1
 workflows:
   heroku_deploy:
     jobs:
       - deploy
+      - notify-slack
