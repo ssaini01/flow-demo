@@ -25,6 +25,6 @@ workflows:
   heroku_deploy:
     jobs:
       - deploy
-      - notify-slack
+      - notify-slack:
           requires:
             - deploy
