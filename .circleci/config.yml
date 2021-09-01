@@ -27,4 +27,4 @@ workflows:
       - deploy
       - notify-slack
           requires:
-            -deploy
+            - deploy
