@@ -1,4 +1,4 @@
-# Heroku Flow Demo [![CircleCI](https://circleci.com/gh/ssaini01/CircleCI/tree/main.svg?style=shield&circle-token=bac7a21f8eed9af7e4fe45561243afe0c5f231b7)](https://circleci.com/gh/ssaini01/CircleCI/tree/main)
+# Heroku Flow Demo [![CircleCI](https://circleci.com/gh/ssaini01/flow-demo/tree/master.svg?style=shield)](https://circleci.com/gh/ssaini01/flow-demo/tree/master)
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
 
